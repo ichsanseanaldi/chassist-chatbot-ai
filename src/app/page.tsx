@@ -215,7 +215,7 @@ export default function Main() {
               </svg>
               <p className='mub-10 text-center'>
                 Chassist is a chatting bot app which uses AI from <Link className='link-ref' href="https://openai.com/" target="_blank">OpenAI</Link>, 
-                it's free to use and doesn&apos;t require Login.
+                it&apos;s free to use and doesn&apos;t require Login.
               </p>
             </div>
             <div className='text-center mub-10'>
@@ -228,7 +228,7 @@ export default function Main() {
         <input
           className="flex-wide input-text"
           value={input}
-          placeholder="What's on your thoughts?"
+          placeholder="What&apos;s on your thoughts?"
           onChange={handleInputChange}
           disabled={isLoading}
         />
