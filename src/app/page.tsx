@@ -62,7 +62,7 @@ export default function Main() {
                 className='input-text w-100' 
                 type="text" name="name" 
                 id="name" 
-                placeholder="What's your name?" 
+                placeholder="What&apos;s your name?" 
                 value={username} 
                 onChange={(e)=>setUsername(e.target.value)} 
                 autoFocus 
