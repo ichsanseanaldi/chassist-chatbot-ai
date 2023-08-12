@@ -13,7 +13,7 @@ const font = Pacifico({
   display:'swap'
 })
 
-export default function page() {
+export default function Main() {
 
   const {messages, input, handleInputChange, handleSubmit, error, isLoading} = useChat();
 
