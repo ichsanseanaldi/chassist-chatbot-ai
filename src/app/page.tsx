@@ -215,7 +215,7 @@ export default function Main() {
               </svg>
               <p className='mub-10 text-center'>
                 Chassist is a chatting bot app which uses AI from <Link className='link-ref' href="https://openai.com/" target="_blank">OpenAI</Link>, 
-                it's free to use and doesn't require Login.
+                it's free to use and doesn&apos;t require Login.
               </p>
             </div>
             <div className='text-center mub-10'>
