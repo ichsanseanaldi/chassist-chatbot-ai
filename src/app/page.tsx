@@ -59,7 +59,7 @@ export default function Main() {
             <form onSubmit={submitUsername} className="modal-wrapper flex flex-column flex-center">
               <h3>Welcome to <span className={font.className}>Chassist</span> !</h3>
               <input 
-                className='input-text w-100' 
+                className='input-text w-100 modal' 
                 type="text" name="name" 
                 id="name" 
                 placeholder="What&apos;s your name?" 
@@ -68,7 +68,7 @@ export default function Main() {
                 autoFocus 
                 required
               />
-              <Button props={'w-100 button'} word={"Enter"}/>
+              <Button props={'w-100 button modal'} word={"Enter"}/>
             </form>
           </div>
       }
@@ -226,13 +226,15 @@ export default function Main() {
       </div>
       <form onSubmit={handleSubmit} className="flex">
         <input
-          className="flex-wide input-text"
+          className="flex-wide input-text prompt"
           value={input}
-          placeholder="What&apos;s on your thoughts?"
+          placeholder={`${isLoading ? 'Please wait...' : `What's on your thoughts?`}`}
           onChange={handleInputChange}
           disabled={isLoading}
+          autoFocus
+          required
         />
-        <button className='button' type="submit" disabled={isLoading}>
+        <button className='button prompt' type="submit" disabled={isLoading}>
         {
           isLoading ?
 
