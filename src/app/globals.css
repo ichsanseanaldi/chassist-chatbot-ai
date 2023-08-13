@@ -102,10 +102,12 @@ a:hover,button:hover:not(:disabled){
 
 .flex-start{
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .flex-end{
   justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .flex-between{
@@ -221,6 +223,7 @@ a:hover,button:hover:not(:disabled){
   border-radius: 5px;
   margin-top: 5px;
   padding: 5px;
+  max-width: max-content;
 }
 
 .input-text{

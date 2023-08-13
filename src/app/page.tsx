@@ -88,7 +88,7 @@ export default function Main() {
         
           messages.map((e,i)=>(
             <div key={i} className={`flex ${e.role === 'user' ? 'flex-end' : 'flex-start'}`} tabIndex={i === messages.length-1 ? 0 : undefined} ref={i === messages.length-1 ? ref : null}>
-              <div className='content-wrapper'>
+              <div className={`content-wrapper flex flex-column ${e.role === 'user' ? 'flex-end' : 'flex-start'}`}>
                 <div className='role'>
                   {e.role === 'user' ? 
 
