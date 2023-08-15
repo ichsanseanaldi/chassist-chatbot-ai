@@ -57,7 +57,7 @@ export default function Main() {
       {newUser &&
           <div className='modal-entry flex flex-center'>
             <form onSubmit={submitUsername} className="modal-wrapper flex flex-column flex-center">
-              <h3>Welcome to <span className={font.className}>Chassist</span> !</h3>
+              <h3 className='text-center'>Welcome to <span className={font.className}>Chassist</span> !</h3>
               <input 
                 className='input-text w-100 modal' 
                 type="text" name="name" 
