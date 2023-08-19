@@ -11,7 +11,7 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: 'Chassist | Chatbot AI',
-  description: "Chassistant is a chatting bot app which uses AI from OpenAi, it's free to use and doesn't require Login.",
+  description: "Chassis is a chatting bot app which uses AI from OpenAi, it's free to use and doesn't require Login.",
 }
 
 export default function RootLayout({
