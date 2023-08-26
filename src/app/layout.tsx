@@ -11,7 +11,15 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: 'Chassist | Chatbot AI',
-  description: "Chassis is a chatting bot app which uses AI from OpenAi, it's free to use and doesn't require Login.",
+  description: "Chassist is a chatting bot app which uses ChatGPT AI from OpenAI, it's free to use and doesn't require Login.",
+  generator:"Next.js",
+  publisher:"Vercel",
+  applicationName:"Chassist | Chatbot AI",
+  robots:"index, follow",
+  keywords:["Chatbot","AI","Chassist","ChatGPT"],
+  referrer:"origin",
+  creator:"Ichsan Seanaldi Permana",
+  alternates:{canonical:"https://chassist.vercel.app/"},
 }
 
 export default function RootLayout({
