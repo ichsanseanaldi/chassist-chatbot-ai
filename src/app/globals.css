@@ -212,16 +212,18 @@ a:hover,button:hover:not(:disabled){
 .message-container{
   position: relative;
   height: 80vh;
-  background-color: var(--color-dark-grey);
+  background-color: var(--color-white);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow-y: auto;
+  border: 1px solid var(--color-grey);
+  box-shadow: 8px 0px 28px -10px rgba(0,0,0,0.2);
   scrollbar-width: thin;
   scrollbar-color:rgba(255,255,255,0.3) transparent;
 }
 
 .message-container .content-wrapper{
-  color: var(--color-white);
+  color: var(--color-black);
   max-width: 70%;
   margin: 20px 10px;
 }
@@ -233,7 +235,6 @@ a:hover,button:hover:not(:disabled){
 
 .message-container .content-wrapper .content{
   background-color: var(--color-grey);
-  color: var(--color-black);
   white-space: pre-wrap;
   border-radius: 5px;
   margin-top: 5px;
