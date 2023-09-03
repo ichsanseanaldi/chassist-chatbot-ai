@@ -22,7 +22,8 @@ export const metadata: Metadata = {
   alternates:{canonical:"https://chassist.vercel.app/"},
   verification:{
     google:"VPJMCbyK5vNMPtSxKkB6x261bchSwi7bZ-B4VvkgM08"
-  }
+  },
+  icons:'/icon.ico'
 }
 
 export default function RootLayout({
