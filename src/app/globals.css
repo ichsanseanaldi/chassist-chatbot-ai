@@ -340,8 +340,12 @@ button:hover:not(:disabled) {
     right: 0;
   }
 
+  .svg-wrapper {
+    min-height: 80vh;
+  }
+
   svg.m-auto {
     width: 100%;
-    max-height: 200px;
+    height: 100%;
   }
 }
