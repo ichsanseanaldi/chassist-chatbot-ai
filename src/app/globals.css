@@ -197,11 +197,6 @@ button:hover:not(:disabled) {
   z-index: 99;
 }
 
-.dark {
-  color: var(--color-white);
-  background-color: var(--color-black);
-}
-
 .error-wrapper {
   color: crimson;
   border: 1px solid crimson;
@@ -220,8 +215,11 @@ button:hover:not(:disabled) {
 
 .message-container {
   position: relative;
-  min-height: 80vh;
+  height: 80vh;
   background-color: var(--color-black);
+  background-image: url("https://img.freepik.com/free-vector/squares-pattern-background_1319-129.jpg?w=740&t=st=1695458304~exp=1695458904~hmac=17844f743d8f4233d6397fb9f97b5fb8bb5fecc00f44b84610c9e3b2a521b194");
+  background-size: 100px;
+  background-blend-mode: darken;
   padding: 10px;
   overflow-y: auto;
   border-radius: 5px;
@@ -252,7 +250,7 @@ button:hover:not(:disabled) {
 
 .input-text {
   padding: 10px;
-  border: 1px solid var(--color-grey);
+  border: 1px solid var(--color-dark-grey);
   margin: 10px 0;
 }
 
@@ -305,13 +303,41 @@ button:hover:not(:disabled) {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   h1 {
     font-size: 24px;
   }
 
+  .children-wrapper {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    background-color: var(--color-black);
+  }
+
+  .wrapper {
+    width: 100vw;
+    padding: 0;
+  }
+
   .message-container {
-    max-height: 90vh;
+    height: 100%;
+    padding-bottom: 40px;
+    border-radius: 0;
+    border-top: 2px solid var(--color-black);
+    border-bottom: 2px solid var(--color-black);
+  }
+
+  .input-text.prompt,
+  .button.prompt {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .form-prompt {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 
   svg.m-auto {

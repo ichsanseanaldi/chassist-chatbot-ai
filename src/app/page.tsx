@@ -7,7 +7,8 @@ import {Pacifico} from "next/font/google"
 import Link from "next/link"
 import {FormEvent, FormEventHandler, useEffect, useRef, useState} from "react"
 
-type localtype = string | null | undefined
+type localType = string | null
+
 const font = Pacifico({
   subsets: ["latin"],
   weight: "400",
@@ -25,15 +26,14 @@ export default function Main() {
     isLoading,
   } = useChat()
 
-  // const [localmessage, setLocalMessages] = useState<Message[] | localtype>()
   const [username, setUsername] = useState<string>("")
   const [newUser, setNewUser] = useState<boolean>(false)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const state = localStorage.getItem("newuser")
-    const stored_username: localtype = localStorage.getItem("username")
-    const stored_message: Message[] | localtype =
+    const stored_username: localType = localStorage.getItem("username")
+    const stored_message: Message[] | localType =
       localStorage.getItem("messages")
 
     if (state === null || state === "true") {
@@ -147,7 +147,7 @@ export default function Main() {
                     fillRule='evenodd'
                     clipRule='evenodd'
                     d='M349.089 485.782C421.518 485.782 485.079 431.906 449.383 358.727C413.687 285.549 546.319 287.913 585.28 237.336C632.794 175.657 619.034 -86.1635 314.013 73.455C265.153 99.024 139.668 47.15 98.044 72.889C49.048 103.186 -19.8856 165.225 49.048 228.774C83.004 260.077 -38.7346 341.326 14.5844 414.104C66.61 485.117 103.08 417.421 182.288 431.906C261.497 446.39 295.297 485.782 349.089 485.782Z'
-                    fill='#202020'
+                    fill='white'
                   />
                   <path
                     d='M265.021 358.474C265.021 358.474 281.698 350.629 287.924 345.171C294.15 339.713 301.891 326.154 301.891 326.154C301.891 326.154 386.914 387.557 442.352 378.798C455.125 376.78 480.014 368.29 481.601 353.33C485.935 312.481 425.971 302.043 439.069 281.328C447.065 268.683 471.902 287.502 471.902 287.502L574.92 338.174C574.92 338.174 539.33 425.904 452.962 429.419C346.718 433.744 265.021 358.474 265.021 358.474Z'
@@ -581,7 +581,7 @@ export default function Main() {
           )}
         </div>
       </div>
-      <form onSubmit={handleSubmit} className='flex'>
+      <form onSubmit={handleSubmit} className='flex form-prompt'>
         <input
           className='flex-wide input-text prompt'
           value={input}
