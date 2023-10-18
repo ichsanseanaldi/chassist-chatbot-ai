@@ -1,12 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Nunito } from 'next/font/google'
+import { Inter, Nunito } from 'next/font/google'
 import Navbar from '@/components/Navbar'
+import { preload } from 'react-dom'
 
-const nunito = Nunito({
+const font = Inter({
   subsets:['latin'],
   weight:['400','700','900'],
-  display:'swap'
+  display:'swap',
+  preload:true
 })
 
 export const metadata: Metadata = {
@@ -33,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" dir="ltr">
-      <body className={nunito.className}>
+      <body className={font.className}>
         <Navbar/>
         <div className="children-wrapper">
           {children}
