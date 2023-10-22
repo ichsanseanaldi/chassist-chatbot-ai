@@ -21,7 +21,8 @@ body {
   font-weight: 400;
   color: var(--color-black);
   text-rendering: optimizeLegibility;
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
 }
 
 a,
@@ -282,7 +283,8 @@ button:hover:not(:disabled) {
 }
 
 .button.stop{
-  color: red;
+  color: white;
+  background-color: red;
   border: 1px solid red;
 }
 

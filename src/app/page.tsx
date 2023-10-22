@@ -34,8 +34,7 @@ export default function Main() {
   useEffect(() => {
     const state = localStorage.getItem("newuser")
     const stored_username: localType = localStorage.getItem("username")
-    const stored_message: Message[] | localType =
-      localStorage.getItem("messages")
+    const stored_message: Message[] | localType = localStorage.getItem("messages")
 
     if (state === null || state === "true") {
       localStorage.setItem("newuser", "true")
@@ -129,13 +128,13 @@ export default function Main() {
                       <div className='flex flex-start'>{e.role}</div>
                     )}
                   </div>
+                  <div className='content'>{e.content}</div>
                    {
                      e.role !== 'user' 
-                     && isLoading 
+                    //  && isLoading 
                      && i === messages.length-1 
-                     && <button onClick={stop} className="button stop">Stop Message</button>
+                     && <button onClick={stop} className="button stop">Stop Generating Message</button>
                    } 
-                  <div className='content'>{e.content}</div>
                 </div>
               </div>
             ))
