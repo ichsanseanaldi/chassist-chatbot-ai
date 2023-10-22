@@ -131,7 +131,7 @@ export default function Main() {
                   <div className='content'>{e.content}</div>
                    {
                      e.role !== 'user' 
-                    //  && isLoading 
+                     && isLoading 
                      && i === messages.length-1 
                      && <button onClick={stop} className="button stop">Stop Generating Message</button>
                    } 
