@@ -6,7 +6,7 @@ import { preload } from 'react-dom'
 
 const font = Inter({
   subsets:['latin'],
-  weight:['400','700','900'],
+  weight:['200','400','700','900'],
   display:'swap',
   preload:true
 })
