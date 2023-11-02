@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter, Nunito } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import { preload } from 'react-dom'
+import {Analytics} from '@vercel/analytics/react';
 
 const font = Inter({
   subsets:['latin'],
@@ -36,6 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <body className={font.className}>
+        <Analytics/>
         <Navbar/>
         <div className="children-wrapper">
           {children}
