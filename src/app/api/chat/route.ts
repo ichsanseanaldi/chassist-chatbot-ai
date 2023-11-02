@@ -7,7 +7,7 @@ const openAIConfig = new Configuration({
 
 const openai = new OpenAIApi(openAIConfig);
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
  
 export async function POST(req: Request) {
 
@@ -30,6 +30,4 @@ export async function POST(req: Request) {
       
     }
  
-
-  
 }
