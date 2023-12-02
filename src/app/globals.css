@@ -1,9 +1,9 @@
 :root {
-  --color-black: #202020;
-  --color-white: #fff;
-  --color-grey: #ddd;
-  --color-dark-grey: #aaa;
-  --wrapper-width: 800px;
+  --color-black: #101010;
+  --color-white: #FFF;
+  --color-grey: #DDD;
+  --color-dark-grey: #303030;
+  --wrapper-width: 1200px;
 }
 
 * {
@@ -20,15 +20,13 @@ body {
   font-size: 16px !important;
   font-weight: 400;
   color: var(--color-black);
-  text-rendering: optimizeLegibility;
-  font-family: "Inter", sans-serif;
   line-height: 1.5;
 }
 
 a,
 input,
 button {
-  font-family: inherit;
+  font-family: Inherit;
   color: inherit;
   border: none;
   outline: none;
@@ -36,7 +34,7 @@ button {
 
 a,
 button {
-  transition: 0.2s;
+  transition: 0.1s;
   cursor: pointer;
   display: block;
 }
@@ -148,8 +146,8 @@ button:hover:not(:disabled) {
 }
 
 .navbar {
-  background-color: var(--color-white);
-  color: var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-white);
   position: absolute;
   top: 0;
   left: 0;
@@ -167,7 +165,7 @@ button:hover:not(:disabled) {
 .children-wrapper {
   margin-top: 50px;
   padding: 30px 0;
-  background-color: var(--color-white);
+  background: var(--color-black);
 }
 
 .wrapper {
@@ -199,11 +197,15 @@ button:hover:not(:disabled) {
   z-index: 99;
 }
 
+.bg-bot{
+  background-color: #202020;
+}
+
 .error-wrapper {
   color: crimson;
-  border: 1px solid crimson;
-  padding: 10px;
-  border-radius: 5px;
+  border-left: 1px solid crimson;
+  padding: 0 10px;
+  text-align: start;
 }
 
 .modal-wrapper {
@@ -219,19 +221,19 @@ button:hover:not(:disabled) {
   position: relative;
   height: 80vh;
   background-color: var(--color-black);
-  background-image: url("https://img.freepik.com/free-vector/squares-pattern-background_1319-129.jpg?w=740&t=st=1695458304~exp=1695458904~hmac=17844f743d8f4233d6397fb9f97b5fb8bb5fecc00f44b84610c9e3b2a521b194");
-  background-size: 100px;
-  background-blend-mode: darken;
-  padding: 10px;
+  padding: 10px 0;
   overflow-y: auto;
-  border-radius: 5px;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }
 
+.message-main{
+  border-bottom: 1px solid var(--color-dark-grey);
+}
+
 .message-container .content-wrapper {
   color: var(--color-black);
-  max-width: 70%;
+  max-width: 100%;
   margin: 20px 10px;
 }
 
@@ -242,51 +244,54 @@ button:hover:not(:disabled) {
 }
 
 .message-container .content-wrapper .content {
-  background-color: var(--color-grey);
+  color: var(--color-white);
   white-space: pre-wrap;
   border-radius: 5px;
   margin-top: 5px;
-  padding: 5px;
+  padding: 5px 0;
   max-width: max-content;
 }
 
 .input-text {
-  padding: 10px;
-  border: 1px solid var(--color-dark-grey);
-  margin: 10px 0;
-}
-
-.input-text:focus {
-  border: 1px solid var(--color-black);
+  padding: 15px;
+  background: transparent;
+  color: var(--color-white);
+  border-bottom: 1px solid var(--color-white);
+  margin: 20px 0;
 }
 
 .input-text.modal {
-  border-radius: 5px;
-}
-
-.input-text.prompt {
-  border-radius: 5px 0 0 5px;
+  margin: 10px 0 0;
+  padding:20px 10px;
+  color: black;
+  border-bottom: 1px solid var(--color-dark-grey);
 }
 
 .button {
   padding: 10px;
-  margin: 10px 0;
-  background-color: var(--color-black);
+  margin: 20px 0;
   color: var(--color-white);
+  background: transparent;
+  border-bottom: 1px solid var(--color-white);
 }
 
-.button.modal, .button.stop {
-  border-radius: 5px;
-}
-
-.button.prompt {
-  border-radius: 0 5px 5px 0;
+.button.modal{
+  background-color: var(--color-black);
+  margin: 10px 0;
+  padding:15px 0;
 }
 
 .button.stop{
-  color: white;
-  background-color: red;
-  border: 1px solid red;
+  color: rgb(255, 71, 71);
+  border: none;
+  max-width: 200px;
+  text-align: start;
+  padding: 10px 0;
+  text-decoration: underline;
+}
+
+.green{
+  color: lightgreen;
 }
 
 /* custom */

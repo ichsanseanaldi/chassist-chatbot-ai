@@ -89,19 +89,17 @@ export default function Main() {
               autoFocus
               required
             />
-            <Button props={"w-100 button modal"} word={"Enter"} />
+            <Button props={"w-100 button modal"} word={"Submit & Continue"} />
           </form>
         </div>
       )}
       {error && (
-        <div className='mub-10 flex flex-center error-wrapper flex-column text-center'>
-          <strong className='mub-10'>Something went wrong...</strong>
-          <em>
-            Please report to
-            <Link href='mailto:ichsanseanaldi10@gmail.com'>
-              ichsanseanaldi10@gmail.com
-            </Link>
-          </em>
+        <div className='mub-10 flex error-wrapper flex-column'>
+          <strong>Something went wrong...</strong>
+          Please report to
+          <Link href='mailto:ichsanseanaldi10@gmail.com'>
+            ichsanseanaldi10@gmail.com
+          </Link>
         </div>
       )}
       <div className='message-container flex flex-column'>
@@ -110,23 +108,17 @@ export default function Main() {
             messages.map((e, i) => (
               <div
                 key={i}
-                className={`flex ${
-                  e.role === "user" ? "flex-end" : "flex-start"
+                className={`message-main flex ${
+                  e.role === "user" ? "" : "bg-bot"
                 }`}
                 tabIndex={i === messages.length - 1 ? 0 : undefined}
                 ref={i === messages.length - 1 ? ref : null}
               >
                 <div
-                  className={`content-wrapper flex flex-column ${
-                    e.role === "user" ? "flex-end" : "flex-start"
-                  }`}
+                  className={`content-wrapper flex flex-column`}
                 >
                   <div className='role'>
-                    {e.role === "user" ? (
-                      <div className='flex flex-end'>{username}</div>
-                    ) : (
-                      <div className='flex flex-start'>{e.role}</div>
-                    )}
+                    <div className={`flex ${e.role === "assistant" && 'green pacifico'}`}>{e.role === "assistant" ? e.role : username}</div>
                   </div>
                   <div className='content'>{e.content}</div>
                    {
@@ -142,7 +134,7 @@ export default function Main() {
             <div className='flex flex-column flex-center svg-wrapper'>
               <div className='w-min'>
                 <svg width="300px" height="300px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#202020" className="m-auto" stroke="#EEE" strokeWidth={'2%'} >
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.48 4h4l.5.5v2.03h.52l.5.5V8l-.5.5h-.52v3l-.5.5H9.36l-2.5 2.76L6 14.4V12H3.5l-.5-.64V8.5h-.5L2 8v-.97l.5-.5H3V4.36L3.53 4h4V2.86A1 1 0 0 1 7 2a1 1 0 0 1 2 0 1 1 0 0 1-.52.83V4zM12 8V5H4v5.86l2.5.14H7v2.19l1.8-2.04.35-.15H12V8zm-2.12.51a2.71 2.71 0 0 1-1.37.74v-.01a2.71 2.71 0 0 1-2.42-.74l-.7.71c.34.34.745.608 1.19.79.45.188.932.286 1.42.29a3.7 3.7 0 0 0 2.58-1.07l-.7-.71zM6.49 6.5h-1v1h1v-1zm3 0h1v1h-1v-1z"/>
+                  <path fillRule="evenodd" clipRule="evenodd" d="M8.48 4h4l.5.5v2.03h.52l.5.5V8l-.5.5h-.52v3l-.5.5H9.36l-2.5 2.76L6 14.4V12H3.5l-.5-.64V8.5h-.5L2 8v-.97l.5-.5H3V4.36L3.53 4h4V2.86A1 1 0 0 1 7 2a1 1 0 0 1 2 0 1 1 0 0 1-.52.83V4zM12 8V5H4v5.86l2.5.14H7v2.19l1.8-2.04.35-.15H12V8zm-2.12.51a2.71 2.71 0 0 1-1.37.74v-.01a2.71 2.71 0 0 1-2.42-.74l-.7.71c.34.34.745.608 1.19.79.45.188.932.286 1.42.29a3.7 3.7 0 0 0 2.58-1.07l-.7-.71zM6.49 6.5h-1v1h1v-1zm3 0h1v1h-1v-1z"/>
                 </svg>
                 <p className='mub-10 text-center'>
                   Chassist is a chatting bot app which uses AI from{" "}
