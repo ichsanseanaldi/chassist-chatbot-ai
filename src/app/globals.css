@@ -262,7 +262,7 @@ button:hover:not(:disabled) {
 
 .input-text.modal {
   margin: 10px 0 0;
-  padding:20px 10px;
+  padding: 15px 10px;
   color: black;
   border-bottom: 1px solid var(--color-dark-grey);
 }
